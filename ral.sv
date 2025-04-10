@@ -147,7 +147,7 @@ class my_adapter extends uvm_reg_adapter;
     if(!$cast(tr, bus_item))
       `uvm_fatal(get_type_name(), "Failed to cast  transaction")
     
-      rw.kind = (tr.pwrite) ? 1 : 0;
+      rw.kind = (tr.pwrite) ? UVM_WRITE : UVM_READ;
     rw.addr = tr.paddr;
     rw.data = (tr.pwrite) ? tr.pwdata : tr.prdata;
    

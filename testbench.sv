@@ -1,9 +1,10 @@
- import uvm_pkg::*;
+import uvm_pkg::*;
 `include "uvm_macros.svh"
 `include "apb_if.sv"
 `include "apb_seq_item.sv"
 `include "ral.sv"
 `include  "apb_seq.sv"
+`include  "apb_seq_se_up_mr.sv"
 `include "apb_sqr.sv"
 `include "apb_drv.sv"
 `include "apb_mon.sv"
@@ -11,8 +12,7 @@
 `include "apb_scb.sv"
 `include "apb_env.sv"
 `include "apb_test.sv"
-
-module tb;
+module testbench;
 bit pclk;
 bit presetn;
   
