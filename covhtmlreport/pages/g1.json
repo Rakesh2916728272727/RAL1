@@ -1,0 +1,19 @@
+var g_data = {
+g715:[{dummy:0},
+{name:'cntrl_cov',f:1,type:1,id:716,tb:'1',h:'1',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G'],opts:[[],['merge_instance','auto(true)']],parent:'715'},
+{name:'\\/testbench_sv_unit::ctrl_register::cntrl_cov ',f:1,type:2,id:718,tb:'1',h:'1',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G'],opts:[[],['per_instance','true']],cvg:'cntrl_cov',parent:'716'}],
+g720:[{dummy:0},
+{name:'c1_cov',f:1,type:1,id:721,tb:'3',h:'1',m:'2',hp:'33.33%',cov:['33.33%','R'],g:'100.00%',gp:['33.33%','R'],opts:[[],['merge_instance','auto(true)']],parent:'720'},
+{name:'\\/testbench_sv_unit::reg1_register::c1_cov ',f:1,type:2,id:723,tb:'3',h:'1',m:'2',hp:'33.33%',cov:['33.33%','R'],g:'100.00%',gp:['33.33%','R'],opts:[[],['per_instance','true']],cvg:'c1_cov',parent:'721'}],
+g725:[{dummy:0},
+{name:'c2_cov',f:1,type:1,id:726,tb:'3',h:'1',m:'2',hp:'33.33%',cov:['33.33%','R'],g:'100.00%',gp:['33.33%','R'],opts:[[],['merge_instance','auto(true)']],parent:'725'},
+{name:'\\/testbench_sv_unit::reg2_register::c2_cov ',f:1,type:2,id:728,tb:'3',h:'1',m:'2',hp:'33.33%',cov:['33.33%','R'],g:'100.00%',gp:['33.33%','R'],opts:[[],['per_instance','true']],cvg:'c2_cov',parent:'726'}],
+g730:[{dummy:0},
+{name:'c3_cov',f:1,type:1,id:731,tb:'3',h:'1',m:'2',hp:'33.33%',cov:['33.33%','R'],g:'100.00%',gp:['33.33%','R'],opts:[[],['merge_instance','auto(true)']],parent:'730'},
+{name:'\\/testbench_sv_unit::reg3_register::c3_cov ',f:1,type:2,id:733,tb:'3',h:'1',m:'2',hp:'33.33%',cov:['33.33%','R'],g:'100.00%',gp:['33.33%','R'],opts:[[],['per_instance','true']],cvg:'c3_cov',parent:'731'}],
+g735:[{dummy:0},
+{name:'c4_cov',f:1,type:1,id:736,tb:'3',h:'1',m:'2',hp:'33.33%',cov:['33.33%','R'],g:'100.00%',gp:['33.33%','R'],opts:[[],['merge_instance','auto(true)']],parent:'735'},
+{name:'\\/testbench_sv_unit::reg4_register::c4_cov ',f:1,type:2,id:738,tb:'3',h:'1',m:'2',hp:'33.33%',cov:['33.33%','R'],g:'100.00%',gp:['33.33%','R'],opts:[[],['per_instance','true']],cvg:'c4_cov',parent:'736'}],
+dummyEnd:0
+};
+processCovergroupsData(g_data);

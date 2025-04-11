@@ -1,6 +1,7 @@
 import uvm_pkg::*;
 `include "uvm_macros.svh"
 `include "apb_if.sv"
+`include "top.sv"
 `include "apb_seq_item.sv"
 `include "ral.sv"
 `include  "apb_seq.sv"

@@ -1,0 +1,8 @@
+var g_db_data = [
+{dummy:0},
+{name:'cntrl_cov',f:1,type:6,id:716,tb:'1',h:'1',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G'],opts:[[],['merge_instance','auto(true)']],hdlPath:'/testbench_sv_unit/ctrl_register',parent:'715'},
+{name:'c1_cov',f:1,type:6,id:721,tb:'3',h:'1',m:'2',hp:'33.33%',cov:['33.33%','R'],g:'100.00%',gp:['33.33%','R'],opts:[[],['merge_instance','auto(true)']],hdlPath:'/testbench_sv_unit/reg1_register',parent:'720'},
+{name:'c2_cov',f:1,type:6,id:726,tb:'3',h:'1',m:'2',hp:'33.33%',cov:['33.33%','R'],g:'100.00%',gp:['33.33%','R'],opts:[[],['merge_instance','auto(true)']],hdlPath:'/testbench_sv_unit/reg2_register',parent:'725'},
+{name:'c3_cov',f:1,type:6,id:731,tb:'3',h:'1',m:'2',hp:'33.33%',cov:['33.33%','R'],g:'100.00%',gp:['33.33%','R'],opts:[[],['merge_instance','auto(true)']],hdlPath:'/testbench_sv_unit/reg3_register',parent:'730'},
+{name:'c4_cov',f:1,type:6,id:736,tb:'3',h:'1',m:'2',hp:'33.33%',cov:['33.33%','R'],g:'100.00%',gp:['33.33%','R'],opts:[[],['merge_instance','auto(true)']],hdlPath:'/testbench_sv_unit/reg4_register',parent:'735'}];
+processConsCovergroupsData(g_db_data);

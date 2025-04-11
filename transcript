@@ -1,6 +1,3 @@
-# vsim -c work.testbench 
-# Start time: 12:53:30 on Apr 10,2025
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # //  Questa Sim
 # //  Version 10.6c linux Jul 25 2017
 # //
@@ -15,6 +12,14 @@
 # //  is prohibited from disclosure under the Trade Secrets Act,
 # //  18 U.S.C. Section 1905.
 # //
+# vsim -coverage work.testbench 
+# Start time: 15:35:51 on Apr 11,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: ral.sv(215): (vopt-2240) Treating stand-alone use of function 'set_coverage' as an implicit VOID cast.
+# ** Warning: ral.sv(220): (vopt-2240) Treating stand-alone use of function 'set_coverage' as an implicit VOID cast.
+# ** Warning: ral.sv(225): (vopt-2240) Treating stand-alone use of function 'set_coverage' as an implicit VOID cast.
+# ** Warning: ral.sv(230): (vopt-2240) Treating stand-alone use of function 'set_coverage' as an implicit VOID cast.
+# ** Warning: ral.sv(235): (vopt-2240) Treating stand-alone use of function 'set_coverage' as an implicit VOID cast.
 # Loading sv_std.std
 # Loading mtiUvm.uvm_pkg
 # Loading work.testbench_sv_unit(fast)
@@ -24,6 +29,8 @@
 # ** Warning: (vsim-3764) apb_drv.sv(16): Stand-alone call to function 'get' treated as implicit void cast.
 #    Time: 0 ns  Iteration: 0  Region: /testbench_sv_unit::apb_drv File: testbench.sv
 # Loading /tools/mentor/questasim_10.6c/questasim/uvm-1.1d/linux/uvm_dpi.so
+# ** Warning: (vsim-8634) Code was not compiled with coverage options.
+run -all
 # ----------------------------------------------------------------
 # UVM-1.1d
 # (C) 2007-2013 Mentor Graphics Corporation
@@ -47,30 +54,20 @@
 # UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
 # UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(217) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
 # UVM_INFO @ 0: reporter [RNTST] Running test apb_test...
-# include_coverage not located
-#   did you mean recording_detail?
-# include_coverage not located
-#   did you mean recording_detail?
-# include_coverage not located
-#   did you mean recording_detail?
-# include_coverage not located
-#   did you mean recording_detail?
-# include_coverage not located
-#   did you mean recording_detail?
 # UVM_INFO apb_test.sv(21) @ 0: uvm_test_top [TEST] -------------------------------------------------------------------------
 # Name                       Type                               Size  Value
 # -------------------------------------------------------------------------
 # uvm_test_top               apb_test                           -     @471 
 #   env                      apb_env                            -     @478 
 #     agent                  apb_agent                          -     @489 
-#       drv                  apb_drv                            -     @661 
-#         rsp_port           uvm_analysis_port                  -     @676 
-#         seq_item_port      uvm_seq_item_pull_port             -     @668 
-#       mon                  apb_mon                            -     @684 
-#         mon_ap             uvm_analysis_port                  -     @700 
-#       sqr                  apb_sqr                            -     @552 
-#         rsp_export         uvm_analysis_export                -     @559 
-#         seq_item_export    uvm_seq_item_pull_imp              -     @653 
+#       drv                  apb_drv                            -     @659 
+#         rsp_port           uvm_analysis_port                  -     @674 
+#         seq_item_port      uvm_seq_item_pull_port             -     @666 
+#       mon                  apb_mon                            -     @682 
+#         mon_ap             uvm_analysis_port                  -     @698 
+#       sqr                  apb_sqr                            -     @550 
+#         rsp_export         uvm_analysis_export                -     @557 
+#         seq_item_export    uvm_seq_item_pull_imp              -     @651 
 #         arbitration_queue  array                              0     -    
 #         lock_queue         array                              0     -    
 #         num_last_reqs      integral                           32    'd1  
@@ -79,43 +76,99 @@
 #       bus_in               uvm_analysis_imp                   -     @513 
 #       reg_ap               uvm_analysis_port                  -     @521 
 #     scb                    apb_scb                            -     @499 
-#       recv                 uvm_analysis_imp                   -     @714 
+#       recv                 uvm_analysis_imp                   -     @712 
 # -------------------------------------------------------------------------
 # 
-# UVM_INFO apb_seq_se_up_mr.sv(12) @ 0: uvm_test_top.env.agent.sqr@@seq [[SEQ]:] set ctrl_register -> Desired Value: 1 & Mirrored Value: 0 
-# UVM_INFO apb_drv.sv(46) @ 30: uvm_test_top.env.agent.drv [driver Write ] WDATA =1 ADDR : 0
-# UVM_INFO apb_mon.sv(38) @ 70: uvm_test_top.env.agent.mon [MONITOR]  Write WDATA : 1 ADDR : 0
-# UVM_INFO apb_scb.sv(24) @ 70: uvm_test_top.env.scb [SCO] DATA Stored Addr : 0 Data :1
+# UVM_INFO apb_drv.sv(46) @ 30: uvm_test_top.env.agent.drv [driver Write ] WDATA =5 ADDR : 0
+# UVM_INFO apb_mon.sv(38) @ 70: uvm_test_top.env.agent.mon [MONITOR]  Write WDATA : 5 ADDR : 0
+# UVM_INFO apb_scb.sv(24) @ 70: uvm_test_top.env.scb [SCO] DATA Stored Addr : 0 Data :5
 # ----------------------------------------------------------------
-# UVM_INFO apb_seq_se_up_mr.sv(16) @ 70: uvm_test_top.env.agent.sqr@@seq [[SEQ]:] update ctrl_register -> Desired Value: 1 & Mirrored Value: 1 
-# UVM_INFO apb_mon.sv(45) @ 150: uvm_test_top.env.agent.mon [MONITOR]  Read  ADDR : 0 RDATA : 1
-# UVM_INFO apb_scb.sv(32) @ 150: uvm_test_top.env.scb [SCO] Test Passed -> Addr : 0 tempData :1 prdata=1
+# UVM_INFO apb_seq.sv(27) @ 70: uvm_test_top.env.agent.sqr@@seq [[SEQ]:] write ctrl_register -> Desired Value: 5 & Mirrored Value: 5 
+# UVM_INFO apb_mon.sv(45) @ 150: uvm_test_top.env.agent.mon [MONITOR]  Read  ADDR : 0 RDATA : 5
+# UVM_INFO apb_scb.sv(32) @ 150: uvm_test_top.env.scb [SCO] Test Passed -> Addr : 0 tempData :5 prdata=5
 # ----------------------------------------------------------------
 # UVM_INFO apb_drv.sv(72) @ 150: uvm_test_top.env.agent.drv [driver Read]  ADDR : 0
-# UVM_INFO apb_seq_se_up_mr.sv(20) @ 170: uvm_test_top.env.agent.sqr@@seq [[SEQ]:] mirror ctrl_register -> Desired Value: 1 & Mirrored Value: 1
-# UVM_INFO apb_mon.sv(45) @ 190: uvm_test_top.env.agent.mon [MONITOR]  Read  ADDR : 0 RDATA : 1
-# UVM_INFO apb_scb.sv(32) @ 190: uvm_test_top.env.scb [SCO] Test Passed -> Addr : 0 tempData :1 prdata=1
+# UVM_INFO apb_seq.sv(31) @ 170: uvm_test_top.env.agent.sqr@@seq [[SEQ]:] Readctrl_register -> Desired Value: 5 & Mirrored Value: 5 & Data Read: 5
+# UVM_INFO apb_mon.sv(45) @ 190: uvm_test_top.env.agent.mon [MONITOR]  Read  ADDR : 0 RDATA : 5
+# UVM_INFO apb_scb.sv(32) @ 190: uvm_test_top.env.scb [SCO] Test Passed -> Addr : 0 tempData :5 prdata=5
 # ----------------------------------------------------------------
-# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 270: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO apb_drv.sv(46) @ 210: uvm_test_top.env.agent.drv [driver Write ] WDATA =10 ADDR : 4
+# UVM_INFO apb_mon.sv(38) @ 250: uvm_test_top.env.agent.mon [MONITOR]  Write WDATA : 10 ADDR : 4
+# UVM_INFO apb_scb.sv(24) @ 250: uvm_test_top.env.scb [SCO] DATA Stored Addr : 4 Data :10
+# ----------------------------------------------------------------
+# UVM_INFO apb_seq.sv(36) @ 250: uvm_test_top.env.agent.sqr@@seq [[SEQ]:] write reg1_register -> Desired Value: 10 & Mirrored Value: 10 
+# UVM_INFO apb_mon.sv(45) @ 330: uvm_test_top.env.agent.mon [MONITOR]  Read  ADDR : 4 RDATA : 10
+# UVM_INFO apb_scb.sv(32) @ 330: uvm_test_top.env.scb [SCO] Test Passed -> Addr : 4 tempData :10 prdata=10
+# ----------------------------------------------------------------
+# UVM_INFO apb_drv.sv(72) @ 330: uvm_test_top.env.agent.drv [driver Read]  ADDR : 4
+# UVM_INFO apb_seq.sv(40) @ 350: uvm_test_top.env.agent.sqr@@seq [[SEQ]:] Read reg1_register -> Desired Value: 10 & Mirrored Value: 10 & Data Read: 10
+# UVM_INFO apb_mon.sv(45) @ 370: uvm_test_top.env.agent.mon [MONITOR]  Read  ADDR : 4 RDATA : 10
+# UVM_INFO apb_scb.sv(32) @ 370: uvm_test_top.env.scb [SCO] Test Passed -> Addr : 4 tempData :10 prdata=10
+# ----------------------------------------------------------------
+# UVM_INFO apb_drv.sv(46) @ 390: uvm_test_top.env.agent.drv [driver Write ] WDATA =15 ADDR : 8
+# UVM_INFO apb_mon.sv(38) @ 430: uvm_test_top.env.agent.mon [MONITOR]  Write WDATA : 15 ADDR : 8
+# UVM_INFO apb_scb.sv(24) @ 430: uvm_test_top.env.scb [SCO] DATA Stored Addr : 8 Data :15
+# ----------------------------------------------------------------
+# UVM_INFO apb_seq.sv(44) @ 430: uvm_test_top.env.agent.sqr@@seq [[SEQ]:] write reg2_register -> Desired Value: 15 & Mirrored Value: 15 
+# UVM_INFO apb_mon.sv(45) @ 510: uvm_test_top.env.agent.mon [MONITOR]  Read  ADDR : 8 RDATA : 15
+# UVM_INFO apb_scb.sv(32) @ 510: uvm_test_top.env.scb [SCO] Test Passed -> Addr : 8 tempData :15 prdata=15
+# ----------------------------------------------------------------
+# UVM_INFO apb_drv.sv(72) @ 510: uvm_test_top.env.agent.drv [driver Read]  ADDR : 8
+# UVM_INFO apb_seq.sv(48) @ 530: uvm_test_top.env.agent.sqr@@seq [[SEQ]:] Read reg2_register -> Desired Value: 15 & Mirrored Value: 15 & Data Read: 15
+# UVM_INFO apb_mon.sv(45) @ 550: uvm_test_top.env.agent.mon [MONITOR]  Read  ADDR : 8 RDATA : 15
+# UVM_INFO apb_scb.sv(32) @ 550: uvm_test_top.env.scb [SCO] Test Passed -> Addr : 8 tempData :15 prdata=15
+# ----------------------------------------------------------------
+# UVM_INFO apb_drv.sv(46) @ 570: uvm_test_top.env.agent.drv [driver Write ] WDATA =20 ADDR : c
+# UVM_INFO apb_mon.sv(38) @ 610: uvm_test_top.env.agent.mon [MONITOR]  Write WDATA : 20 ADDR : c
+# UVM_INFO apb_scb.sv(24) @ 610: uvm_test_top.env.scb [SCO] DATA Stored Addr : c Data :20
+# ----------------------------------------------------------------
+# UVM_INFO apb_seq.sv(53) @ 610: uvm_test_top.env.agent.sqr@@seq [[SEQ]:] write reg3_register -> Desired Value: 20 & Mirrored Value: 20 
+# UVM_INFO apb_mon.sv(45) @ 690: uvm_test_top.env.agent.mon [MONITOR]  Read  ADDR : c RDATA : 20
+# UVM_INFO apb_scb.sv(32) @ 690: uvm_test_top.env.scb [SCO] Test Passed -> Addr : c tempData :20 prdata=20
+# ----------------------------------------------------------------
+# UVM_INFO apb_drv.sv(72) @ 690: uvm_test_top.env.agent.drv [driver Read]  ADDR : c
+# UVM_INFO apb_seq.sv(57) @ 710: uvm_test_top.env.agent.sqr@@seq [[SEQ]:] Read reg3_register -> Desired Value: 20 & Mirrored Value: 20 & Data Read: 20
+# UVM_INFO apb_mon.sv(45) @ 730: uvm_test_top.env.agent.mon [MONITOR]  Read  ADDR : c RDATA : 20
+# UVM_INFO apb_scb.sv(32) @ 730: uvm_test_top.env.scb [SCO] Test Passed -> Addr : c tempData :20 prdata=20
+# ----------------------------------------------------------------
+# UVM_INFO apb_drv.sv(46) @ 750: uvm_test_top.env.agent.drv [driver Write ] WDATA =25 ADDR : 10
+# UVM_INFO apb_mon.sv(38) @ 790: uvm_test_top.env.agent.mon [MONITOR]  Write WDATA : 25 ADDR : 10
+# UVM_INFO apb_scb.sv(24) @ 790: uvm_test_top.env.scb [SCO] DATA Stored Addr : 10 Data :25
+# ----------------------------------------------------------------
+# UVM_INFO apb_seq.sv(61) @ 790: uvm_test_top.env.agent.sqr@@seq [[SEQ]:] write reg1_register -> Desired Value: 25 & Mirrored Value: 25 
+# UVM_INFO apb_mon.sv(45) @ 870: uvm_test_top.env.agent.mon [MONITOR]  Read  ADDR : 10 RDATA : 25
+# UVM_INFO apb_scb.sv(32) @ 870: uvm_test_top.env.scb [SCO] Test Passed -> Addr : 10 tempData :25 prdata=25
+# ----------------------------------------------------------------
+# UVM_INFO apb_drv.sv(72) @ 870: uvm_test_top.env.agent.drv [driver Read]  ADDR : 10
+# UVM_INFO apb_seq.sv(65) @ 890: uvm_test_top.env.agent.sqr@@seq [[SEQ]:] Read reg4_register -> Desired Value: 25 & Mirrored Value: 25 & Data Read: 25
+# UVM_INFO apb_mon.sv(45) @ 910: uvm_test_top.env.agent.mon [MONITOR]  Read  ADDR : 10 RDATA : 25
+# UVM_INFO apb_scb.sv(32) @ 910: uvm_test_top.env.scb [SCO] Test Passed -> Addr : 10 tempData :25 prdata=25
+# ----------------------------------------------------------------
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 990: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
 # 
 # --- UVM Report Summary ---
 # 
 # ** Report counts by severity
-# UVM_INFO :   16
+# UVM_INFO :   55
 # UVM_WARNING :    0
 # UVM_ERROR :    0
 # UVM_FATAL :    0
 # ** Report counts by id
-# [MONITOR]     3
+# [MONITOR]    15
 # [Questa UVM]     2
 # [RNTST]     1
-# [SCO]     3
+# [SCO]    15
 # [TEST]     1
 # [TEST_DONE]     1
-# [[SEQ]:]     3
-# [driver Read]     1
-# [driver Write ]     1
+# [[SEQ]:]    10
+# [driver Read]     5
+# [driver Write ]     5
 # ** Note: $finish    : /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
-#    Time: 270 ns  Iteration: 54  Instance: /testbench
-# End time: 12:53:41 on Apr 10,2025, Elapsed time: 0:00:11
-# Errors: 0, Warnings: 1
+#    Time: 990 ns  Iteration: 54  Instance: /testbench
+# 1
+# Break in Task uvm_pkg/uvm_root::run_test at /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh line 430
+coverage report -html -htmldir covhtmlreport -assert -directive -cvg -code bcefst -threshL 50 -threshH 90
+# Report created in covhtmlreport/index.html
+quit
+# End time: 15:36:55 on Apr 11,2025, Elapsed time: 0:01:04
+# Errors: 0, Warnings: 7

@@ -1,0 +1,8 @@
+var g_data = {'dummy':{null},
+'/testbench_sv_unit/ctrl_register':{h:'715',g:1,z:1},
+'/testbench_sv_unit/reg1_register':{h:'720',g:1,z:1},
+'/testbench_sv_unit/reg2_register':{h:'725',g:1,z:1},
+'/testbench_sv_unit/reg3_register':{h:'730',g:1,z:1},
+'/testbench_sv_unit/reg4_register':{h:'735',g:1,z:1},
+'work.testbench_sv_unit':{h:'3',z:1},
+'/testbench_sv_unit':{h:'713',z:1}};
